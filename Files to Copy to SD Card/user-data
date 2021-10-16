@@ -24,7 +24,7 @@ users:
 groups:
 #- robot: [robot]
 #- robotics: [robot]
-- dedyms:
+- dedyms: [dedyms]
   gid: '1000' 
 
 bootcmd:
