@@ -12,18 +12,11 @@ users:
 - default
 - name: dedyms
   gecos: dedyms
-  groups: users dedyms sudo
+  groups: sudo
   sudo: "ALL=(ALL) NOPASSWD:ALL"
   lock_passwd: false
   shell: /bin/bash
   passwd: $6$xfhQ0cNNk1PI/5OL$jwLlg/Mn3OfHqPwkGmcbhbPPaCD7Wrr82RjPhg5fCA2mmBAKqyp.Mh.FZH0Gzcua8jTZftYSRDwC7dFIUScmZ.
-
-## Add users and groups to the system, and import keys with the ssh-import-id
-## utility
-groups:
-#- robot: [robot]
-#- robotics: [robot]
-- dedyms: [dedyms]
 
 bootcmd:
 # disable ipv6 on all interfaces
