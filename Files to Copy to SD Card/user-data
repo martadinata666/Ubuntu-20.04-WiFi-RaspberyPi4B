@@ -31,17 +31,17 @@ ssh_pwauth: true
 #groups:
 #- robot: [robot]
 #- robotics: [robot]
-#- pi
+#- dock
 #
-#users:
-#- default
-#- name: robot
-#  gecos: Mr. Robot
-#  primary_group: robot
-#  groups: users
-#  ssh_import_id: foobar
-#  lock_passwd: false
-#  passwd: $5$hkui88$nvZgIle31cNpryjRfO9uArF7DYiBcWEnjqq7L1AQNN3
+users:
+- default
+- name: dedyms
+  gecos: Mr. Dedyms
+  primary_group: dedyms
+  groups: users
+  lock_passwd: false
+  passwd: $6$.CDzrRTU$R.xZpXpfJhkXpoBgKljy/./xYFnEUZ3jkN861ZzTVc6phtLT61w6q1SpV2Uvl2lsw5sZsg1Lb52v3UV1k..vQ/
+  uid: 1000
 
 ## Update apt database and upgrade packages on first boot
 #package_update: true
