@@ -17,7 +17,6 @@ users:
   lock_passwd: false
   shell: /bin/bash
   passwd: $6$xfhQ0cNNk1PI/5OL$jwLlg/Mn3OfHqPwkGmcbhbPPaCD7Wrr82RjPhg5fCA2mmBAKqyp.Mh.FZH0Gzcua8jTZftYSRDwC7dFIUScmZ.
-  uid: '1000' 
 
 ## Add users and groups to the system, and import keys with the ssh-import-id
 ## utility
@@ -25,7 +24,6 @@ groups:
 #- robot: [robot]
 #- robotics: [robot]
 - dedyms: [dedyms]
-  gid: '1000' 
 
 bootcmd:
 # disable ipv6 on all interfaces
