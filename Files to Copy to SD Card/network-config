@@ -1,22 +1,23 @@
-# This file contains a netplan-compatible configuration which cloud-init
-# will apply on first-boot. Please refer to the cloud-init documentation and
-# the netplan reference for full details:
-#
-# https://cloudinit.readthedocs.io/
-# https://netplan.io/reference
-#
-
-#Replace the entire user-data on the imaged SD Card with this file.
 version: 2
-renderer: networkd
-wifis:
+ethernets:
+  eth0:
+    dhcp4: true 
+    dhcp6: false
+    optional: true
+wifis:  
   wlan0:
-    dhcp4: true
-    dhcp6: true
+    dhcp4: true 
+    dhcp6: false
     optional: true
     access-points:
       403OT5:
-         password: "ayamkampung50"
+        password: "ayamkampung50"
       403OT24:
-         password: "ayamkampung24"
-
+        password: "ayamkampung24"
+#      workssid:
+#        auth:
+#          key-management: eap
+#          method: peap
+#          identity: "me@example.com"
+#          password: "passw0rd"
+#          ca-certificate: /etc/my_ca.pem
