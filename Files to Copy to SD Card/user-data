@@ -41,7 +41,7 @@ users:
   primary_group: dedyms
   groups: users
   lock_passwd: false
-  passwd: $6$.CDzrRTU$R.xZpXpfJhkXpoBgKljy/./xYFnEUZ3jkN861ZzTVc6phtLT61w6q1SpV2Uvl2lsw5sZsg1Lb52v3UV1k..vQ/
+  hashed_passwd: '$6$.CDzrRTU$R.xZpXpfJhkXpoBgKljy/./xYFnEUZ3jkN861ZzTVc6phtLT61w6q1SpV2Uvl2lsw5sZsg1Lb52v3UV1k..vQ/'
   uid: '1000'
 
 ## Update apt database and upgrade packages on first boot
