@@ -28,10 +28,11 @@ ssh_pwauth: true
 
 ## Add users and groups to the system, and import keys with the ssh-import-id
 ## utility
-#groups:
+groups:
 #- robot: [robot]
 #- robotics: [robot]
-#- dock
+- dedyms:
+  gid: '1000' 
 #
 users:
 - default
@@ -41,7 +42,7 @@ users:
   groups: users
   lock_passwd: false
   passwd: $6$.CDzrRTU$R.xZpXpfJhkXpoBgKljy/./xYFnEUZ3jkN861ZzTVc6phtLT61w6q1SpV2Uvl2lsw5sZsg1Lb52v3UV1k..vQ/
-  uid: 1000
+  uid: '1000'
 
 ## Update apt database and upgrade packages on first boot
 #package_update: true
