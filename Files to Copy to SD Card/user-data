@@ -16,6 +16,7 @@ users:
   sudo: "ALL=(ALL) NOPASSWD:ALL"
   lock_passwd: false
   shell: /bin/bash
+  # salt + hashed password, generate with `mkpasswd` or `openssl passwd -6`
   passwd: $6$xfhQ0cNNk1PI/5OL$jwLlg/Mn3OfHqPwkGmcbhbPPaCD7Wrr82RjPhg5fCA2mmBAKqyp.Mh.FZH0Gzcua8jTZftYSRDwC7dFIUScmZ.
 
 bootcmd:
