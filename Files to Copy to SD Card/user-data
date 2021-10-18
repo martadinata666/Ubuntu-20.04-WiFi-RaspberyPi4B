@@ -10,14 +10,15 @@ ssh_pwauth: true
 
 users:
 - default
-- name: dedyms
-  gecos: dedyms
+- name: pi
+  gecos: pi
   groups: sudo
   sudo: "ALL=(ALL) NOPASSWD:ALL"
   lock_passwd: false
   shell: /bin/bash
   # salt + hashed password, generate with `mkpasswd` or `openssl passwd -6`
-  passwd: $6$xfhQ0cNNk1PI/5OL$jwLlg/Mn3OfHqPwkGmcbhbPPaCD7Wrr82RjPhg5fCA2mmBAKqyp.Mh.FZH0Gzcua8jTZftYSRDwC7dFIUScmZ.
+  # passwd: $6$xfhQ0cNNk1PI/5OL$jwLlg/Mn3OfHqPwkGmcbhbPPaCD7Wrr82RjPhg5fCA2mmBAKqyp.Mh.FZH0Gzcua8jTZftYSRDwC7dFIUScmZ.
+  passwd: $6$0nhSN7h/Degeozzb$rXxU0AaE8lH/HIC.AkshqhevG.huGJHLj/w28TH20WSdNA7GW0t8hckE2lvCX/qp2RLnD86ao3PT969Eup31Q.
 
 bootcmd:
 # disable ipv6 on all interfaces
