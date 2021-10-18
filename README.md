@@ -1,4 +1,4 @@
-# Ubuntu 20.04 Wi-Fi RaspberyPi 4B
+# Ubuntu 20.04 Wi-Fi and Cloud Init RaspberyPi 4B
 How to configure Raspberry Pi 4B & Ubuntu 20.04 for headless Wi-Fi without disabling cloud-init:
  
 1. Image the SD Card using Raspberry Pi Imager v 1.3 selecting the 'UNBUNTU 20.04 LTS (RASBERRY PI 3/4)(64-bit) image. See: https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview
