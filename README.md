@@ -1,21 +1,19 @@
-# Ubuntu 20.04 Wi-Fi and Cloud Init RaspberyPi 4B
+# Ubuntu 20.04+ Wi-Fi and Cloud Init RaspberyPi 4B
 How to configure Raspberry Pi 4B & Ubuntu 20.04 for headless Wi-Fi without disabling cloud-init:
  
 1. Image the SD Card using Raspberry Pi Imager v 1.3 selecting the 'UNBUNTU 20.04 LTS (RASBERRY PI 3/4)(64-bit) image. See: https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview
 
 2. When imaging is completed, remove the SD Card and then reinsert it so that it is mounted. Under Windows, Raspberry Pi Imager v 1.3, software ejects the SD Card after writing the image and it will be unavailable until removed and re-inserted.
 
-3. Copy 'network-config' & 'user-data' from the 'Files to Copy to SD Card' folder in this repository, overwitting the same two files on the SD Card.
+3. Modify network-config and user-data, as needed, in sample the user will be `pi` and ras password `raspberrypi`
 
-4. Edit 'network-config' on the SD Card, replacing SSID and PassPhrase with your wireless access point credentials. Ensure the two values remain wrapped in quotes. Be sure not to add any externous characters and be sure to preserve the indenting as-is. Save the modified file to the SD Card.
+4. Copy 'network-config' & 'user-data' from the 'Files to Copy to SD Card' folder in this repository, overwitting the same two files on the SD Card.
 
 5. Eject the SD Card, then remove from the SD Card from the computer used for imaging/editing and insert it into your powered-off Raspberry Pi 4B.
 
 6. Power up the Raspberry Pi 4B and then Wait about 4 minutes to allow Ubuntu to boot, cloud-init to do its job, and then Ubuntu to reboot. If you observe with a montior, you will see the logon box appear after the first boot but it will take about two more minutes for cloud-init to show SSH keys, etc., and then reboot. If you try to logon before cloud-init is done the default credentials will not work as they are set by cloud-init.
 
-7. Logon locally if you have a monitor and keyboard attached or via SSH if headless. The default user is 'ubuntu' and the default password is 'ubuntu'. See Ubuntu Tutorial: https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server
-
-That's it: Headless, Wi-Fi'd Ubuntu 20.04 on Raspbery Pi 4B.
+That's it: Headless, Wi-Fi'd Ubuntu 20.04+ on Raspbery Pi 4B.
 
 Additional Notes
 If you choose to make your own version of 'network-config' and/or 'user-data' rather than copy mine, be especially careful with editors such as Notepad++, as they may enter tab characters when you press 'enter' to start a new line. Tab charcters are not valid for the files, as they are consumed by cloud-init to build the netplan YAML files. Use two spaces for indentations. You must maintain the indentations for the file to be interpreted correctly.
