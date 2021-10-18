@@ -10,10 +10,10 @@ wifis:
     dhcp6: false
     optional: true
     access-points:
-      403OT5:
-        password: "ayamkampung50"
-      403OT24:
-        password: "ayamkampung24"
+      SSID:
+        password: "SSID_PASS"
+      SSID2:
+        password: "SSID2_PASS"
 #      workssid:
 #        auth:
 #          key-management: eap
